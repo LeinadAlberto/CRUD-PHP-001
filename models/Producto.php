@@ -20,7 +20,8 @@
             $sql = "SELECT * FROM tm_producto WHERE est=1";
             $sql = $conectar->prepare($sql);
             $sql->execute();
-            return $resultado = $sql->fetchAll();
+            $resultado = $sql->fetchAll();
+            return $resultado;
         }
 
         public function get_producto_x_id($prod_id) {

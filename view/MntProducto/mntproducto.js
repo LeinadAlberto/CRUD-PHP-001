@@ -55,5 +55,39 @@ $(document).ready(function() {
     });
 });
 
+function editar(prod_id) {
+    console.log(prod_id);
+}
+
+function eliminar(prod_id) {
+    swal.fire({
+        title: "Estas seguro?",
+        text: "¡No podrás revertir esto!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "¡Sí, bórralo!",
+        cancelButtonText: "¡No, cancela!",
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            /* console.log(prod_id); */
+            $.post("../../controller/producto.php?op=eliminar", {prod_id:prod_id}, function (data) {
+                $('#productos_data').DataTable().ajax.reload();
+            });
+
+            swal.fire(
+                'Eliminado!',
+                'El registro se elimino correctamente.',
+                'success'
+            )
+        } 
+    })
+}
+
+$(document).on('click', '#btnnuevo', function() {
+    $('#mdltitulo').html('Nuevo Registro');
+    $('#modalmantenimiento').modal('show');
+});
+
 init();
 
