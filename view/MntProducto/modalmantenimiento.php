@@ -20,7 +20,7 @@
         
         <div class="modal-footer">
           <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="submit" name="action" id="#" value="add"class="btn btn-rounded btn-info">Guardar</button>
+          <button type="submit" name="action" id="#" value="add" class="btn btn-rounded btn-info">Guardar</button>
         </div>
       </form>
     </div><!-- /.modal-content -->
