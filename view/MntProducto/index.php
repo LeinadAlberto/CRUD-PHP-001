@@ -59,7 +59,7 @@
 
     <?php require_once("modalmantenimiento.php"); ?>
 
-	<?php require_once("../../mainjs.php"); ?>
+	  <?php require_once("../../mainjs.php"); ?>
 
     <!-- Custom JS -->
     <script src="mntproducto.js"></script>

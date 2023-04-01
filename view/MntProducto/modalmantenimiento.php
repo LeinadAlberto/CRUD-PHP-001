@@ -1,7 +1,7 @@
 <div id="modalmantenimiento" class="modal fade bd-example-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <form method="post" id="producto_form">
+      <form id="producto_form" method="post">
         <div class="modal-header">
           <h5 class="modal-title" id="mdltitulo"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
