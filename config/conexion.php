@@ -3,6 +3,7 @@
     class Conectar {
         protected $dbh;
 
+        /*TODO Función Protegida de la cadena de conexión */
         protected function Conexion() {
             try {
                 $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=crudphp01","root","");
