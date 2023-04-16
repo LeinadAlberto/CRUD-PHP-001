@@ -7,6 +7,11 @@ function init() {
 }
 
 $(document).ready(function() {
+
+    $.post('../../controller/categoria.php?op=combo',function(data) {
+        console.log(data);
+    });
+
     tabla = $('#productos_data').DataTable({
         "aProcessing": true,        //Activamos el procesamiento del datatables
         "aServerSide": true,        //Paginación y filtrado realizados por el servidor

@@ -3,6 +3,7 @@
     class Categoria extends Conectar {
 
         /* READ CATEGORY */
+        /* TODO Obtener todos los registros de la tabla tm_categoria */
         public function get_categoria() {
             $conectar = parent::conexion();
             parent::set_names();
