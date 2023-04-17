@@ -20,3 +20,6 @@
 
     <!-- Sweet Alert 2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Select2 -->
+    <script src="../../public/lib/select2/js/select2.min.js"></script>

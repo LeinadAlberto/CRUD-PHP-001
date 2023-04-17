@@ -12,13 +12,18 @@
 				<div class="modal-body">
 					<input type="hidden" id="prod_id" name="prod_id">
 
-					<!-- Nombre del Próducto -->
+					<div class="form-group">
+						<label class="form-label" for="cat_id">Categoría</label>
+						<select class="form-control select2" id="cat_id" name="cat_id" data-placeholder="Seleccione" style="width: 100%;"></select>
+					</div>
+
+					<!-- Nombre del Producto -->
 					<div class="form-group">
 						<label class="form-label" for="prod_nom">Nombre</label>
 						<input type="text" class="form-control" id="prod_nom" name="prod_nom" placeholder="Ingrese Nombre" required>
 					</div>
 
-					<!-- Descripción del Próducto -->
+					<!-- Descripción del Producto -->
 					<div class="form-group">
 						<label class="form-label" for="prod_desc">Descripción</label>
 						<textarea class="form-control" id="prod_desc" name="prod_desc" rows="3" placeholder="Ingrese Descripción" required></textarea>

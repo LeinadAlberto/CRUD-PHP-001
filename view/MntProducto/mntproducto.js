@@ -8,8 +8,12 @@ function init() {
 
 $(document).ready(function() {
 
+    $('#cat_id').select2({
+        dropdownParent: $("#modalmantenimiento")
+    });
+
     $.post('../../controller/categoria.php?op=combo',function(data) {
-        console.log(data);
+        $('#cat_id').html(data);
     });
 
     tabla = $('#productos_data').DataTable({
