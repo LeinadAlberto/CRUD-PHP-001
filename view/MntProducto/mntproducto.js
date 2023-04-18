@@ -95,6 +95,7 @@ function editar(prod_id) {
     $.post('../../controller/producto.php?op=mostrar',{prod_id:prod_id},function(data) {
         data = JSON.parse(data);
         $('#prod_id').val(data.prod_id);
+        $('#cat_id').val(data.cat_id).trigger('change');
         $('#prod_nom').val(data.prod_nom);
         $('#prod_desc').val(data.prod_desc);
         /* console.log(data); */
