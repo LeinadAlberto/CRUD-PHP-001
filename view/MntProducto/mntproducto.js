@@ -98,6 +98,7 @@ function editar(prod_id) {
         $('#cat_id').val(data.cat_id).trigger('change');
         $('#prod_nom').val(data.prod_nom);
         $('#prod_desc').val(data.prod_desc);
+        $('#prod_cant').val(data.prod_cant);
         /* console.log(data); */
     });
 
@@ -132,8 +133,12 @@ function eliminar(prod_id) {
 
 $(document).on('click', '#btnnuevo', function() {
     $('#mdltitulo').html('Nuevo Registro');
+    $('#cat_id').val('').trigger('change');
     $('#producto_form')[0].reset();
     $('#prod_id').val('');
+    $('#prod_nom').val('');
+    $('#prod_desc').val('');
+    $('#prod_cant').val('');
     $('#modalmantenimiento').modal('show');
 });
 

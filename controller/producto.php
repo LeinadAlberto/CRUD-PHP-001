@@ -15,6 +15,7 @@
                 $sub_array[] = $row["cat_nom"];
                 $sub_array[] = $row["prod_nom"];
                 $sub_array[] = $row["prod_desc"];
+                $sub_array[] = $row["prod_cant"];
                 $sub_array[] = '<button type="button" onClick="editar('.$row["prod_id"].');" id="'.$row["prod_id"].'" class="btn btn-outline-info btn-icon"><div><i class="fa fa-edit"></i></div></buttom>';
                 $sub_array[] = '<button type="button" onClick="eliminar('.$row["prod_id"].');" id="'.$row["prod_id"].'" class="btn btn-outline-danger btn-icon"><div><i class="fa fa-trash"></i></div></buttom>';
                 $data[] = $sub_array;
@@ -35,10 +36,10 @@
             $datos = $producto->get_producto_x_id($_POST["prod_id"]);
             if(empty($_POST["prod_id"])) {
                 if(is_array($datos)==true and count($datos)==0) {
-                    $producto->insert_producto($_POST["cat_id"], $_POST["prod_nom"], $_POST["prod_desc"]);
+                    $producto->insert_producto($_POST["cat_id"], $_POST["prod_nom"], $_POST["prod_desc"], $_POST["prod_cant"]);
                 }
             } else {
-                $producto->update_producto($_POST["prod_id"], $_POST["cat_id"], $_POST["prod_nom"], $_POST["prod_desc"]);
+                $producto->update_producto($_POST["prod_id"], $_POST["cat_id"], $_POST["prod_nom"], $_POST["prod_desc"], $_POST["prod_cant"]);
             }  
         break;
 
@@ -50,6 +51,7 @@
                     $output["cat_id"] = $row["cat_id"];
                     $output["prod_nom"] = $row["prod_nom"];
                     $output["prod_desc"] = $row["prod_desc"];
+                    $output["prod_cant"] = $row["prod_cant"];
                 }
                 echo json_encode($output);
             }
